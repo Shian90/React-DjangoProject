@@ -1,0 +1,2 @@
+Open VS Code in this directory. Run "django4.0.4\Scripts\activate"(VS code automatically activates this) -> Then in terminal cd to DjangoBackend then "python manage.py runserver"
+Go inside ClientEnd > calculation-client > Open VS Code > npm start
