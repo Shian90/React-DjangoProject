@@ -34,6 +34,7 @@ def insertCalculatedRecord(type, value, result):
 
     elif(type == 'fact'):
         try:
+            result = json.dumps(result)
             factorialInstance = Factorial(value=value, output=result)
             factorialInstance.save()
             algoInstance = Factorial.objects.get(aid=factorialInstance.aid)

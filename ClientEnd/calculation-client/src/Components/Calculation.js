@@ -40,67 +40,63 @@ export class Calculation extends Component {
   };
   render() {
     return (
-      <form>
-        <div class="form-group overflow-padding">
-          <p class="h2">Functionalities</p>
+      <div className="container">
+        <form>
+          <div className="form-group overflow-padding">
+            <p className="h3">Functionalities</p>
 
-          <input
-            type="text"
-            class="form-control"
-            id="input-number"
-            placeholder="Enter a number"
-            onChange={this.handleInputChange}
-          />
+            <input
+              type="text"
+              className="form-control"
+              id="input-number"
+              placeholder="Enter a number"
+              onChange={this.handleInputChange}
+            />
 
-          <div className="resultContainer">
             {this.state.error ? (
-              <p class="text-danger">{this.state.errorMessage}</p>
+              <p className="text-danger d-flex justify-content-center text-justify">
+                {this.state.errorMessage}
+              </p>
             ) : this.state.result ? (
-              <p class="text-success">The answer is : {this.state.result}</p>
+              <p className="text-success text-justify">
+                The answer is : {this.state.result}
+              </p>
             ) : (
               <></>
             )}
-          </div>
 
-          <div className="buttonsContainer">
-            <div className="button">
+            <div className="container d-flex justify-content-center">
               <button
                 disabled={this.state.loading}
                 type="submit"
-                class="btn btn-outline-info"
+                className="btn btn-outline-info button"
                 id="sq"
                 onClick={this.handleClick}
               >
                 Square
               </button>
-            </div>
-            <div className="button">
               <button
                 disabled={this.state.loading}
                 type="submit"
-                class="btn btn-outline-info"
+                className="btn btn-outline-info button"
                 id="sqrt"
                 onClick={this.handleClick}
               >
                 SquareRoot
               </button>
-            </div>
-            <div className="button">
               <button
                 disabled={this.state.loading}
                 type="submit"
-                class="btn btn-outline-info"
+                className="btn btn-outline-info button"
                 id="fact"
                 onClick={this.handleClick}
               >
                 Factorial
               </button>
-            </div>
-            <div className="button">
               <button
                 disabled={this.state.loading}
                 type="submit"
-                class="btn btn-outline-info"
+                className="btn btn-outline-info button"
                 id="fib"
                 onClick={this.handleClick}
               >
@@ -108,8 +104,8 @@ export class Calculation extends Component {
               </button>
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     );
   }
 }

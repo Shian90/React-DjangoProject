@@ -18,7 +18,7 @@ class SquareRoot(Algos):
 
 class Factorial(Algos):
     value = models.IntegerField(null=False, blank=False)
-    output = models.IntegerField()
+    output = models.TextField()
 
 
 class Fibonacci(Algos):

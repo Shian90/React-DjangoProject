@@ -39,42 +39,41 @@ export class History extends Component {
   render() {
     return (
       <>
-        <form class="form-inline">
-          <div class="form-group mx-sm-3 mb-2">
-            <p class="h2">History</p>
+        <div className="container">
+          <form className="form-inline">
+            <div className="form-group mx-sm-3 mb-2">
+              <p className="h3">History</p>
 
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Enter number or leave blank"
-              onChange={this.handleInputChange}
-            />
-          </div>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter number or leave blank"
+                onChange={this.handleInputChange}
+              />
+            </div>
 
-          <div className="resultContainer">
             {this.state.error ? (
-              <p class="text-danger">{this.state.errorMessage}</p>
+              <p className="text-danger d-flex justify-content-center">
+                {this.state.errorMessage}
+              </p>
             ) : (
               <></>
             )}
-          </div>
 
-          <div className="buttonsContainer">
-            <div className="button">
+            <div className="container d-flex justify-content-center">
               <button
                 disabled={this.state.loading}
                 type="submit"
-                class="btn btn-outline-info"
+                className="btn btn-outline-info button"
                 onClick={this.handleClick}
               >
                 Show History
               </button>
             </div>
-          </div>
-        </form>
-
+          </form>
+        </div>
         {this.state.history.length > 0 && !this.state.error ? (
-          <table class="table">
+          <table className="table">
             <thead>
               <tr>
                 <th scope="col">Serial</th>
@@ -85,7 +84,7 @@ export class History extends Component {
             </thead>
             <tbody>
               {this.state.history.map((history, i) => (
-                <tr>
+                <tr key={i + 1}>
                   <td>{i + 1}</td>
                   <td>{history.value}</td>
                   <td>{history.output}</td>

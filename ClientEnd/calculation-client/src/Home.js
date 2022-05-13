@@ -7,7 +7,7 @@ import { History } from "./Components/History";
 export class Home extends Component {
   render() {
     return (
-      <div class="overflow-auto overflow-padding">
+      <div className="overflow-auto overflow-padding ">
         <Calculation />
         <History />
       </div>
