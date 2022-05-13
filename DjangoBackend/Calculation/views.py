@@ -50,7 +50,7 @@ def process(request):
         else:
             responseData = {
                 'success': True,
-                'result': result
+                'result': json.dumps(result)
             }
             return JsonResponse(responseData, status=201)
 

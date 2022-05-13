@@ -32,7 +32,6 @@ export class Calculation extends Component {
 
     const res = await calculate(requestBody);
     this.setState({ loading: false });
-
     if (res.success) {
       this.setState({ result: res.result, error: false });
     } else {

@@ -33,7 +33,4 @@ def calculate(type, value):
         return fact(value)
 
     elif(type == "fib"):
-        if(value == 0):
-            return fib(value)[value]
-        else:
-            return fib(value)[value-1]
+        return fib(value)

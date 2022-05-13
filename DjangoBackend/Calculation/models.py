@@ -23,7 +23,7 @@ class Factorial(Algos):
 
 class Fibonacci(Algos):
     value = models.IntegerField(null=False, blank=False)
-    output = models.IntegerField()
+    output = models.TextField()
 
 
 class History(models.Model):

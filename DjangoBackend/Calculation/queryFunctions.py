@@ -1,4 +1,5 @@
 from asyncio import log
+import json
 from logging import WARNING
 import sqlite3
 
@@ -45,6 +46,7 @@ def insertCalculatedRecord(type, value, result):
 
     elif(type == 'fib'):
         try:
+            result = json.dumps(result)
             fibonacciInstance = Fibonacci(value=value, output=result)
             fibonacciInstance.save()
             algoInstance = Fibonacci.objects.get(aid=fibonacciInstance.aid)
