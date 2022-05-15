@@ -53,3 +53,8 @@ th,
 td {
   word-wrap: break-word;
 }
+
+.text-wrap {
+  overflow-wrap: break-word;
+  font-size: 1.15em;
+}

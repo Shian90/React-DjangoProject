@@ -54,11 +54,11 @@ export class Calculation extends Component {
             />
 
             {this.state.error ? (
-              <p className="text-danger d-flex justify-content-center text-justify">
+              <p className="text-danger d-flex justify-content-center text-justify text-wrap">
                 {this.state.errorMessage}
               </p>
             ) : this.state.result ? (
-              <p className="text-success text-justify">
+              <p className="text-success text-justify text-wrap">
                 The answer is : {this.state.result}
               </p>
             ) : (

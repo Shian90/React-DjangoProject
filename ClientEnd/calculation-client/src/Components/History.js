@@ -53,7 +53,7 @@ export class History extends Component {
             </div>
 
             {this.state.error ? (
-              <p className="text-danger d-flex justify-content-center">
+              <p className="text-danger d-flex justify-content-center text-wrap">
                 {this.state.errorMessage}
               </p>
             ) : (
