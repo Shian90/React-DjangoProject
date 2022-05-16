@@ -16,11 +16,13 @@ def fact(value):
 
 
 def fib(value):
-    fibs = [0, 1]
-    for i in range(2, value+1):
-        fibs.append(fibs[-1] + fibs[-2])
     if(value == 0):
-        return [fibs[0]]
+        return []
+    if(value == 1):
+        return [0]
+    fibs = [0, 1]
+    for i in range(2, value):
+        fibs.append(fibs[-1] + fibs[-2])
     return fibs
 
 
